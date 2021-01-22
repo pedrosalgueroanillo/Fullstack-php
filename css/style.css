@@ -92,9 +92,14 @@ header {
 	height: auto;
 	padding: 3rem 2.8rem;
 	background-image: url(../imagenes/montanas.png);
-	background-position: -7px -48px;
+	background-position: -7px 48px;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+@media only screen and (min-width:768px) {
+	header {
+		background-position: -7px -48px;
+	}
 }
 @media only screen and (min-width:768px) {
     header {
@@ -116,7 +121,13 @@ header .contenedor {
 /* logo*/
 .logo img{
     	width: 194px;
-    	margin-top: -14px;
+    	margin-top: -2px;
+}
+@media only screen and (min-width:768px) {
+	.logo img{
+	    	width: 194px;
+	    	margin-top: -14px;
+	}
 }
 @media only screen and (min-width:768px) {
     .logo {
@@ -129,6 +140,14 @@ header .contenedor {
     display: block;
 }
 /* redes sociales */
+.redes-sociales {
+	display: none;
+}
+@media only screen and (min-width:768px) {
+	.redes-sociales {
+		display: block;
+	}
+}
 .redes-sociales ul {
     display: flex;
     flex-direction: row;
@@ -276,6 +295,7 @@ nav ul li a:hover {
 	color: #fff;
 	text-shadow: 1px 1px 3px #000;
 	line-height: 5rem;
+	transform: rotate(-6deg);
 }
 /*------------------------------------*
     Main
@@ -296,9 +316,20 @@ main aside {
     flex: 0 0 20%;
     padding: 3rem;
     min-height: 20rem;
+	text-align: center;
+}
+@media only screen and (min-width:768px) {
+	main aside {
+		text-align: left;
+	}
 }
 main h2 {
-    text-align: left;
+    text-align: center;
+}
+@media only screen and (min-width:768px) {
+	main h2 {
+	    text-align: left;
+	}
 }
 main ul {
     margin-left: 2rem;
@@ -369,7 +400,20 @@ footer p {
 footer .contenedor {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
+}
+@media only screen and (min-width:768px) {
+	footer .contenedor {
+	    flex-direction: row;
+	}
+}
+footer .datos-footer {
+	margin: 1rem 0;
+}
+@media only screen and (min-width:768px) {
+	footer .datos-footer {
+		margin: 0;
+	}
 }
 footer a:hover {
     color: red;
