@@ -170,7 +170,15 @@ header .contenedor {
 /*------------------------------------*
     Navegador
 *------------------------------------*/
+nav.principal {
+	margin-bottom: 2rem;
+}
 
+@media only screen and (min-width:768px) {
+	nav.principal {
+		margin-bottom: 0;;
+	}
+}
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -200,7 +208,7 @@ nav ul li:first-child {
 }
 
 nav ul li a {
-	height: 5.3rem;
+
 	line-height: 5.3rem;
 	text-align: center;
 	display: block;
@@ -332,7 +340,12 @@ main h2 {
 	}
 }
 main ul {
-    margin-left: 2rem;
+    margin-left: 0rem;
+}
+@media only screen and (min-width:768px) {
+	main ul {
+	    margin-left: 2rem;
+	}
 }
 main ul a {
     font-size: 1.4rem;
@@ -351,6 +364,20 @@ main section {
 .contenedor-noticias {
     display: flex;
     justify-content: space-between;
+	flex-direction: column;
+}
+@media only screen and (min-width:768px) {
+	.contenedor-noticias {
+		flex-direction: row;
+	}
+}
+article {
+	margin-bottom: 9rem;
+}
+@media only screen and (min-width:768px) {
+	article {
+		margin-bottom: 2rem;
+	}
 }
 .contenedor-noticias .titulo {
 	padding: 1rem;
