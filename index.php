@@ -38,7 +38,7 @@
                 <li><a href="#">Quien soy?</a></li>
                 <li><a href="#">BUHH !</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="#">Contactar (Ironic mode on)</a></li>
+                <li><a href="#">Contacto (Ironic mode on)</a></li>
             </ul>
         </nav>
 
