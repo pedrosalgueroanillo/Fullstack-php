@@ -28,6 +28,7 @@
             </div>
             <!-- end contenedor header -->
         </header>
+
         <!-- Navegacion principal -->
         <nav class=" principal wrapper">
             <ul>

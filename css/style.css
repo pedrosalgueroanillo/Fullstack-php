@@ -133,7 +133,6 @@ nav ul li:first-child {
     	margin: 0
     }
 }
-
 nav ul li a {
 	background-color: #97989a;
 	height: 5.3rem;
@@ -185,7 +184,6 @@ main {
         flex-direction: row;
     }
 }
-
 main aside {
     flex: 0 0 20%;
     background-color: #858688;
@@ -193,7 +191,6 @@ main aside {
 }
 main section {
     background-color: #858688;
-
 }
 /*------------------------------------*
     Footer
