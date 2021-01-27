@@ -11,24 +11,58 @@
 	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
+:root {
+	--fuenteTexto : 'Open Sans';
+	--fuenteH123 : 'EB Garamond', serif;
+	--colorPrincipal : #82A2BF;
+}
+:hover {
+	transition: all .2s ease-out;
+}
+
 /* html element 62.5% font-size for REM use */
 html {
     font-size:62.5%;
     }
 body {
-    background: #e6e7e9;
+	font-family: 'Rock Salt', cursive;
+	color:#000;
+	font-weight: lighter;
+	line-height: 3rem;
+	font-size: 2rem;
+
 }
 /*------------------------------------*
     Comunes
 *------------------------------------*/
+h1, h2, h3 {
+    margin: 0
+}
+h1 {font-size: 3.4rem;}
+h2 {font-size: 1.8rem;}
+h3 {font-size: 1.5rem;}
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-a:hover {
-    transition: .3s ease-in-out 0s;
+img {width: 100%}
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.bton {
+	background: #fff;
+	padding: 1rem 2rem;
+	border-radius: 11px;
+	color: #000;
+	width: 87%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #000;
 }
 .wrapper {
     max-width: 100%;
@@ -41,14 +75,31 @@ a:hover {
     }
 }
 /*------------------------------------*
+    Fuentes
+*------------------------------------*/
+.fab {
+    font-size: 4rem;
+}
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+/*------------------------------------*
     Header
 *------------------------------------*/
 header {
 	width: 100%;
-    width: 100%;
-    height: auto;
-	background-color: #4b4b4d;
+	height: auto;
 	padding: 3rem 2.8rem;
+	background-image: url(../imagenes/montanas.png);
+	background-position: -7px 48px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media only screen and (min-width:768px) {
+	header {
+		background-position: -7px -48px;
+	}
 }
 @media only screen and (min-width:768px) {
     header {
@@ -68,11 +119,15 @@ header .contenedor {
     }
 }
 /* logo*/
-.logo {
-	background: #d2d3d5;
-	height: 6rem;
-	width: 20rem;
-    margin-bottom: 3rem;
+.logo img{
+    	width: 194px;
+    	margin-top: -2px;
+}
+@media only screen and (min-width:768px) {
+	.logo img{
+	    	width: 194px;
+	    	margin-top: -14px;
+	}
 }
 @media only screen and (min-width:768px) {
     .logo {
@@ -85,6 +140,14 @@ header .contenedor {
     display: block;
 }
 /* redes sociales */
+.redes-sociales {
+	display: none;
+}
+@media only screen and (min-width:768px) {
+	.redes-sociales {
+		display: block;
+	}
+}
 .redes-sociales ul {
     display: flex;
     flex-direction: row;
@@ -94,18 +157,28 @@ header .contenedor {
 }
 .redes-sociales ul li a {
     display: inline-block;
-    background: #d2d3d5;
     width: 4.3rem;
 	height: 4.3rem;
 	border-radius: 50%;
 }
+
 .redes-sociales ul li a:hover {
-    background-color: #fff;
+    color: silver;
+
 }
+
 /*------------------------------------*
     Navegador
 *------------------------------------*/
+nav.principal {
+	margin-bottom: 2rem;
+}
 
+@media only screen and (min-width:768px) {
+	nav.principal {
+		margin-bottom: 0;;
+	}
+}
 nav ul {
     display: flex;
     justify-content: space-between;
@@ -133,14 +206,22 @@ nav ul li:first-child {
     	margin: 0
     }
 }
+
 nav ul li a {
-	background-color: #97989a;
-	height: 5.3rem;
-    display: block;
+
+	line-height: 5.3rem;
+	text-align: center;
+	display: block;
+	color: #82A2BF;
+	font-size: 1.8rem;
+    font-family: 'Rock Salt', cursive;
 }
 nav ul li a:hover {
 	background-color: #fff;
+    transform: scale(1.1);
+    transform: translate(0, -5px)
 }
+
 /*------------------------------------*
     CTA
 *------------------------------------*/
@@ -156,24 +237,78 @@ nav ul li a:hover {
         flex-direction: row;
     }
 }
-.cta .contenedor div {
-	background-color: #858688;
+.cta .contenedor > div {
 	flex: 0 0 calc( 33% - 1rem );
 	min-height: 28rem;
 	margin-bottom: 2rem;
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 12px;
 }
 @media only screen and (min-width:768px) {
     .cta .contenedor > div {
-        background-color: #858688;
         flex: 0 0 calc( 33% - 1rem );
         height: 24rem;
     }
+}
+
+.cta .contenedor > div {
+	flex: 0 0 calc( 33% - 1rem );
+	height: 24rem;
+	border: 1px solid var(--colorPrincipal);
+	border-radius: 12px;
+	overflow: hidden;
+}
+.cta .contenedor > div {
+    height: 30rem;
+    position: relative;
+}
+.bg-cta {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(88%);
+	height: 30rem;
+	padding: 4rem;
+	display: block;
+}
+.bg-cta.uno {
+	background-image: url(../imagenes/amiguetes.jpg);
+}
+.bg-cta.dos {
+	background-image: url(../imagenes/veraneo.jpg);
+}
+.bg-cta.tres {
+	background-image: url(../imagenes/dulces.jpg);
+}
+
+.cta a {
+	position: absolute;
+	bottom: 2rem;
+	margin: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.cta a:hover {
+    background-color: var(--colorPrincipal);
+}
+.cta h2 {
+	position: absolute;
+	top: 3rem;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	font-size: 3rem;
+	width: 80%;
+	color: #fff;
+	text-shadow: 1px 1px 3px #000;
+	line-height: 5rem;
+	transform: rotate(-6deg);
 }
 /*------------------------------------*
     Main
 *------------------------------------*/
 main {
-	background: #4b4b4d;
 	min-height: 54rem;
 	display: flex;
     flex-direction: column;
@@ -184,18 +319,129 @@ main {
         flex-direction: row;
     }
 }
+
 main aside {
     flex: 0 0 20%;
-    background-color: #858688;
+    padding: 3rem;
     min-height: 20rem;
+	text-align: center;
+}
+@media only screen and (min-width:768px) {
+	main aside {
+		text-align: left;
+	}
+}
+main h2 {
+    text-align: center;
+}
+@media only screen and (min-width:768px) {
+	main h2 {
+	    text-align: left;
+	}
+}
+main ul {
+    margin-left: 0rem;
+}
+@media only screen and (min-width:768px) {
+	main ul {
+	    margin-left: 2rem;
+	}
+}
+main ul a {
+    font-size: 1.4rem;
+    line-height: 3em;
+}
+main ul a:hover {
+    color: red;
+    text-indent: 2rem;
+    display: block;;
 }
 main section {
-    background-color: #858688;
+
+	border-radius: 24px;
+	padding: 2rem;
+}
+.contenedor-noticias {
+    display: flex;
+    justify-content: space-between;
+	flex-direction: column;
+}
+@media only screen and (min-width:768px) {
+	.contenedor-noticias {
+		flex-direction: row;
+	}
+}
+article {
+	margin-bottom: 9rem;
+}
+@media only screen and (min-width:768px) {
+	article {
+		margin-bottom: 2rem;
+	}
+}
+.contenedor-noticias .titulo {
+	padding: 1rem;
+	flex: 0 0 52%;
+	margin-left: 17px;
+}
+.contenedor-noticias h3 {
+    text-align: left;
+    margin: 0;
+}
+.contenedor-noticias p {
+    font-size: 1.6rem;
+    font-family: Helvetica;
+    margin-bottom: 0;
+}
+.contenedor-noticias .leer-mas {
+	font-size: 1.4rem;
+	font-family: Helvetica;
+	text-align: right;
+	display: block;
+	margin: 0 1rem;
+	color: silver;
+}
+.contenedor-noticias a:hover {
+
+	color: red;
+}
+.contenedor-noticias .imagen {
+	flex: 0 0 44%;
+}
+.contenedor-noticias .imagen img{
+    border-radius: 10px;
 }
 /*------------------------------------*
     Footer
 *------------------------------------*/
 footer {
-    background-color: #4b4b4d;
-    height: 6.9rem;;
+	height: 3.9rem;
+	text-align: center;
+	font-size: 1.5rem;
+	border-top: 1px solid silver;
+	padding-top: 1rem;
+}
+footer p {
+    margin: 0;
+}
+footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+@media only screen and (min-width:768px) {
+	footer .contenedor {
+	    flex-direction: row;
+	}
+}
+footer .datos-footer {
+	margin: 1rem 0;
+}
+@media only screen and (min-width:768px) {
+	footer .datos-footer {
+		margin: 0;
+	}
+}
+footer a:hover {
+    color: red;
 }
