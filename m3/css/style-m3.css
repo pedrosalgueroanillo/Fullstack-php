@@ -10,6 +10,7 @@
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
+	overflow: hidden;
 }
 h1 {
 	margin: 0;
@@ -63,14 +64,16 @@ h1 {
 	-o-transform: skew(24deg) scaleY(1) translate(0, 0);
 	-ms-transform: skew(24deg) scaleY(1) translate(0, 0);
 
-    transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all 0.2s cubic-bezier(0.16, .8, .8, 0.16);
 }
+
 
 .block.uno {
 	background-color: #244F75;
     animation-name: animacion1;
     animation-duration: 1s;
     animation-delay: 0.1s;
+	overflow: hidden;
 
 }
 .block.dos {
@@ -78,19 +81,21 @@ h1 {
     animation-name: animacion2;
     animation-duration: 1s;
     animation-delay: 0.2s;
-
+	overflow: hidden;
 }
 .block.tres {
 	background-color: #8C4B7E;
     animation-name: animacion3;
     animation-duration: 1s;
     animation-delay: 0.3s;
+		overflow: hidden;
 }
 .block.cuatro {
 	background-color: #F8BB44;
     animation-name: animacion4;
     animation-duration: 1s;
     animation-delay: 0.4s;
+		overflow: hidden;
 }
 
 .block.cinco {
@@ -98,8 +103,9 @@ h1 {
     animation-name: animacion5;
     animation-duration: 1s;
     animation-delay: 0.5s;
+		overflow: hidden;
 }
-.block:hover:before  {
+.block:hover::before  {
     -webkit-transform: skew(30deg) scale(3) translate(0, 0);
 	-moz-transform: skew(30deg) scale(3) translate(0, 0);
 	-o-transform: skew(30deg) scale(3) translate(0, 0);
