@@ -17,18 +17,10 @@
     <!-- header -->
     <header class="header py-4">
         <!-- Button trigger modal -->
-        <div class="container login">
-            <div class="row justify-content-end">
-                <div class="col-md-12 col-12 mb-4 mb-md-0">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Acceso alumnos
-                    </button>
-                </div>
-            </div>
-        </div>
+        
 
 
-        <div class="container login">
+        <div class="container">
             <div class="row justify-content-end">
                 <!-- Acceso usuarios /  Registro -->
                 <div class="col-md-12 col-12 mb-4 mb-md-0">
