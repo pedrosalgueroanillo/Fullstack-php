@@ -50,7 +50,9 @@
 
     <main class="container">
         <section class="separador">
+            <!-- slide -->
             <?php include('template-parts/slide.php');?>
+            <!-- end slide -->
         </section>
         <div class="container-fluid imagenes-principales">
     <div class="row imagen-superior imagen">
