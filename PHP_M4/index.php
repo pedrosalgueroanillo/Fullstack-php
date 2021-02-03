@@ -28,12 +28,16 @@
                 <!-- logo-->
                 <div class="col-md-4 col-8 mb-4 mb-md-0">
                     <a href="index.php">
-                        <img src="img/plataforma_online.png" class="img-fluid">
+                        <img class="logo "src="img/logo-rest.png" class="img-fluid">
                     </a>
                 </div>
 
                 <!-- menu de navegación -->
                 <div class="col-12 col-md-8">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Launch demo modal
+                    </button>
                     <nav class="nav flex-column flex-md-row text-center d-flex justify-content-md-end justify-content-center">
                         <a href="#" class="nav-link active">Inicio</a>
                         <a href="#" class="nav-link">Nosotros</a>
