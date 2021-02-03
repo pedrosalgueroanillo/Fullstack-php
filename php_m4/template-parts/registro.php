@@ -2,7 +2,7 @@
     <!-- acceso alumnos-->
     <div class="row justify-content-end">
         <div class="col-md-12 col-12 mb-4 mb-md-0 ms-4">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               Acceso alumnos
             </button>
         </div>
@@ -12,7 +12,7 @@
     <!-- registro  usuarios -->
     <div class="row justify-content-end">
         <div class="col-md-12 col-12 mb-4 mb-md-0">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop-registro">
+            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop-registro">
               Registro alumnos
             </button>
         </div>
