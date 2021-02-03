@@ -5,21 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>M4-Bootstrap</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS de CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style-m4.css">
-    <!-- ********* Cogemos los css del CDN
+    <!-- ********* Comentado porque utilizado CSS del CDN
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
      -->
 </head>
 <body>
     <!-- header -->
     <header class="header py-4">
+        <!-- Button trigger modal -->
         <div class="container login">
             <div class="row justify-content-end">
                 <div class="col-md-12 col-12 mb-4 mb-md-0">
-                    <?php include('template-parts/modal.php');?>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Acceso alumnos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container login">
+            <div class="row justify-content-end">
+                <!-- Acceso usuarios /  Registro -->
+                <div class="col-md-12 col-12 mb-4 mb-md-0">
+                    <?php include('template-parts/registro.php');?>
                 </div>
             </div>
         </div>
@@ -34,10 +47,6 @@
 
                 <!-- menu de navegación -->
                 <div class="col-12 col-md-8">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      Launch demo modal
-                    </button>
                     <nav class="nav flex-column flex-md-row text-center d-flex justify-content-md-end justify-content-center">
                         <a href="#" class="nav-link active">Inicio</a>
                         <a href="#" class="nav-link">Nosotros</a>
@@ -261,13 +270,9 @@
     </footer>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-    <!-- *********** JS comentado porque estamos utilizando el CDN de bootstrap
+    <!-- *********** JS Comentado porque estamos utilizando el CDN de bootstrap
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
