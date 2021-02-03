@@ -23,8 +23,14 @@ header {
     background-color: #fff;
 }
 .logo {
-    max-width: 100px;
-    margin: 0 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media only screen and (min-width:768px) {
+    .logo {
+        max-width: 60%;
+        margin: 0 auto;
+    }
 }
 /*------------------------------------*
     slide
