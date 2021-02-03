@@ -22,7 +22,10 @@ p {
 header {
     background-color: #fff;
 }
-
+.logo {
+    max-width: 100px;
+    margin: 0 1rem;
+}
 /*------------------------------------*
     slide
 *------------------------------------*/
