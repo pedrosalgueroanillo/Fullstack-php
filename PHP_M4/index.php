@@ -104,7 +104,7 @@
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-sm-8 col-md-6">
                     <div class="contenido text-center py-3">
-                        <h2 class="text-uppercase text-light">Sobre Nosotros</h2>
+                        <h2 class="text-uppercase text-white">Sobre Nosotros</h2>
 
                         <p class="text-light"> Donec dignissim tincidunt fermentum. Aenean hendrerit auctor vestibulum. </p>
 
@@ -251,7 +251,7 @@
 
                 <div class="row justify-content-end">
                     <div class="col-sm-4 text-right">
-                        <a href="clases.html" class="btn btn-danger">Ver Todas las Clases</a>
+                        <a href="#" class="btn btn-danger">Ver Todas las Clases</a>
                     </div>
                 </div>
             </div>
@@ -279,15 +279,15 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-7">
                         <nav class="nav d-flex flex-column text-center flex-md-row   justify-content-md-start justify-content-center">
-                            <a href="nosotros.html" class="nav-link">Nosotros</a>
-                            <a href="blog.html" class="nav-link">Blog</a>
-                            <a href="clases.html" class="nav-link">Clases</a>
-                            <a href="galeria.html" class="nav-link">Galería</a>
-                            <a href="contacto.html" class="nav-link">Contacto</a>
+                            <a href="#" class="nav-link">Nosotros</a>
+                            <a href="#" class="nav-link">Blog</a>
+                            <a href="#" class="nav-link">Clases</a>
+                            <a href="#" class="nav-link">Galería</a>
+                            <a href="#" class="nav-link">Contacto</a>
                         </nav>
                 </div>
                 <div class="col-md-5">
-                    <p class="copyright text-center text-md-right">Todos los derechos reservados</p>
+                    <p class="copyright text-center text-md-right text-secondary">Todos los derechos reservados</p>
                 </div>
             </div>
         </div>
