@@ -89,13 +89,13 @@
     <p>Afegeix un valor més a l'array que conté 3 integers.</p>
         <?php
         // Añadimos un valor más
-        $array_01[] = 11;
+        $array_02[] = 11;
 
         //otro métddo
-        //array_push($array_01, 565);
+        //array_push($array_02, 565);
 
         //Comprovación
-        //print_r($array_01);
+        //print_r($array_02);
         ?>
 
     <h3>- Exercici 3</h3>
@@ -104,24 +104,157 @@
     <?php
     //unimos los dos arrays
     $unir_array = array_merge($array_01, $array_02);
-   
+    //var_export($unir_array);
     //mezclamos los dos arrays
     shuffle($unir_array);
     
     //Imprimimos por pantalla
+    $total_array = count($unir_array);
     echo "<pre>";
-        print_r(count($unir_array));
+        echo $total_array;
     echo "</pre>";
+
+    // otras formas de contar los elementos
+    //$total_array2 = sizeof($unir_array);
+    //echo $total_array2;
+    
+    // otra forma
+    //print_r(count($unir_array));
+    
+   
+
 
     // No funciona. Da un true. Consular a Nancy
     //$mezclar_arrays = shuffle($unir_array);
     //var_export($mezclar_arrays);
-    
-
      ?>
 
+    <h2>Nivell 3</h2>
+    <h3>- Exercici 1</h3>
+
+    <p>Imprimeix per pantalla(valor a valor) l'array resultant del nivell anterior.</p> 
+    <?php 
+        //imprimimos cada valor del array
+        echo "<pre>";
+            foreach ($unir_array as $key) {
+                
+                echo "<br>";
+                echo $key;
+            }
+        echo "</pre>";
 
 
 
+
+    ?>    
+
+    <h3>- Exercici 2</h3>
+
+    <p>Escriure un programa PHP que realitzi lo següent: </p>
+
+    <p>declarar dues variables X e Y de tipus int, dues variables N i M de tipous double i assigna a cada una un valor. A continuació, mostra per pantalla, per a X e Y:</p>
+    <ul>
+        <li>El valor de cada variable
+        <li>La suma</li> 
+        <li>La resta </li>
+        <li>El producte </li> 
+        <li>La divisió </li>
+        <li>El mòdul</li>
+    </ul>
+
+        <?php 
+        // declaramos variable "x" e "y"
+        $X = 2;
+        $Y = 4;
+        // declaramos variable "N" e "M"
+        $N = 3.33;
+        $M = 5.55;
+        
+        // mostramos en pantalla "X" e "Y"
+        echo "<pre>";
+            echo $X;
+            echo "<br>";
+            echo $Y;
+        echo "</pre>";
+        // mostramos en pantalla la suma
+        echo "<pre>";
+            echo $X + $Y;
+        echo "</pre>";
+        // mostramos en pantalla la resta
+        echo "<pre>";
+        echo $X - $Y;
+        echo "</pre>";
+        // mostramos en pantalla el producto
+        echo "<pre>";
+        echo $X * $Y;
+        echo "</pre>"; 
+        // mostramos en pantalla la división
+        echo "<pre>";
+        echo $X / $Y;
+        echo "</pre>";     
+        // mostramos en pantalla el módulo
+        echo "<pre>";
+        echo $X % $Y;
+        echo "</pre>";          
+        ?>
+        <li>
+            per a N i M, lo mateix.
+        </li>
+        
+        <?php 
+        // mostramos en pantalla "X" e "Y"
+        echo "<pre>";
+            echo $N;
+            echo "<br>";
+            echo $M;
+        echo "</pre>";
+        
+        // mostramos en pantalla la suma
+        echo "<pre>";
+            echo $N + $M;
+        echo "</pre>";
+        // mostramos en pantalla la resta
+        echo "<pre>";
+        echo $N - $M;
+        echo "</pre>";
+        // mostramos en pantalla el producto
+        echo "<pre>";
+        echo $N * $M;
+        echo "</pre>"; 
+        // mostramos en pantalla la división
+        echo "<pre>";
+        echo $N / $M;
+        echo "</pre>";     
+        // mostramos en pantalla el módulo
+        echo "<pre>";
+        echo $N % $M;
+        echo "</pre>";          
+        ?>
+        <p>I per a totes les variables(X,Y,N,M):</p>
+        <ul>
+            <li>El doble de cada variable</li>
+            <li>La suma de totes les variables</li>
+            <li>El producte de totes les variables</li>
+        </ul>
+        <?php 
+           // mostramos el doble de cada variable
+            echo "<pre>";
+                echo ($X * 2) . "<br>";
+                ecHo ($Y * 2) . "<br>";
+                echo ($N * 2) . "<br>";
+                echo ($M * 2) . "<br>";
+            echo "</pre>";
+
+            // mostramos la suma de todas las variables
+            echo "<pre>";
+                echo $X + $Y + $N + $M;
+            echo "</pre>";
+
+            // mostramos el producto de todas las variables
+            echo "<pre>";
+                echo $X * $Y * $N * $M;
+            echo "</pre>";
+
+        ?>
 </body>
 </html>
