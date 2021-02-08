@@ -18,17 +18,69 @@
         <h3>- Exercici 1</h3>
         <p>Programa la funció "resta" que, donats dos paràmetres ens retorni la resta dels dos números.</p>
 
+        <?php
+            function resta($valor1, $valor2) {
+
+                $resultadoResta = $valor1 - $valor2;
+                echo $resultadoResta;
+
+            }
+            echo "<pre>";
+            resta( 42,34);
+            echo "</pre>";
+         ?>
+
 
         <h3>- Exercici 2</h3>
         <p>Programa una lògica que, donat un número qualsevol(per exemple,la teva edat) ens digui si és parell o imparell mitjançant un missatge per pantalla.</p>
+        <?php
+            $edad =11;
+            $operacion = $edad % 2;
+            if($edad == 0) {
+                echo "<pre>Ummm, lo damos como bueno, $edad es par</pre>";
+            } else if ($operacion == 0 ){
+                echo "<pre>Has puesto: $edad y por tanto tu edad es par</pre>" ;
+            }
+            else {
+                echo "<pre>Has puesto: $edad y por tanto es impar</pre>";
+            }
 
+        ?>
 
         <h3>- Exercici 3</h3>
         <p>Agafa la lògica de l'exercici 2 i encapsulala en una funció de nom parell_o_imparell. Invoca aquesta funció per a comprovar que funciona correctament.</p>
 
+        <?php
+            function parell_o_imparell($edad) {
+
+                $operacion = $edad % 2;
+                if($edad == 0) {
+                    echo "<pre>Ummm, lo damos como bueno, $edad es par</pre>";
+                } else if ($operacion == 0 ){
+                    echo "<pre>Has puesto: $edad y por tanto tu edad es par</pre>" ;
+                }
+                else {
+                    echo "<pre>Has puesto: $edad y por tanto es impar</pre>";
+                }
+            }
+
+            echo parell_o_imparell(25);
+
+         ?>
+
 
         <h3>- Exercici 4</h3>
         <p>Programa un bucle que compti fins a 10, mostrant cada  número per pantalla.</p>
+
+
+            <?php
+                echo "<pre>";
+                for ($i=1; $i <= 10; $i++) {
+                    echo  $i . "<br>";
+                }
+                echo "</pre>";
+             ?>
+
 
 
 
