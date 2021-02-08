@@ -82,21 +82,61 @@
              ?>
 
 
-
-
-
         <h2>Nivell 2</h2>
         <h3>- Exercici 1</h3>
         <p>Per jugar a "l'amagatall"  se'ns ha demanat un programa que compti fins a 10. Però la persona que comptarà és una mica tramposa y ho farà comptant de dos en dos. Crea una funció que compti fins a 10, de 2 en 2, mostrant cada número del compte per pantalla.</p>
+
+
+            <?php
+                echo "<pre>";
+                for ($i=0; $i <= 10; $i++) {
+
+                    echo  $i . "<br>";
+                    $i++;
+                }
+                echo "</pre>";
+             ?>
+
+
 
 
         <h3>- Exercici 2</h3>
         <p>Imagina't que volem que conti fins a un número diferent de 10. Programa la funció per a que el final del compte estigui parametritzat.</p>
 
 
+            <?php
+
+                function miCuenta( $numeroTotal ) {
+                    echo "<pre>";
+                    for ($i=0; $i <= $numeroTotal; $i++) {
+
+                        echo  $i . "<br>";
+                        $i++;
+                    }
+                    echo "</pre>";
+                }
+
+                echo micuenta(22);
+             ?>
+
+
         <h3>- Exercici 3</h3>
         <p>Per a prevenir oblits al utilitzar la nostra meravellosa funció "amagatall" establirem un paràmetre per defecte a 10 en la funció que s'encarrega de fer aquest compte. </p>
+        <?php
 
+            function miCuentaControlada( $numeroTotal = 10 ) {
+                echo "<pre>";
+                for ($i=1; $i <= $numeroTotal; $i++) {
+
+                    echo  $i . "<br>";
+
+                }
+                echo "</pre>";
+            }
+
+            echo miCuentaControlada(22);
+            echo miCuentaControlada();
+         ?>
 
         <h2>Nivell 3</h2>
         <h3>- Exercici 1</h3>
