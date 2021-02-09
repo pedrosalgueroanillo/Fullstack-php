@@ -142,6 +142,37 @@
         <h3>- Exercici 1</h3>
         <p>Ens han demanat un llistat amb tots els anys on es van produir jocs olímpics desde 1960(Roma) inclós fins al 2016(Río de Janeiro,també inclós). Programa un bucle que mostri per pantalla els anys olímpics dins de l'interval esmentat.</p>
 
+            <?php
+                // $juegosOlimpicos = array(
+                //     1960 => Roma,
+                //     1964 => Tokio,
+                //     1968 => Ciudad de México,
+                //     1972 => Múnich,
+                //     1976 => Montreal,
+                //     1980 => Moscú,
+                //     1984 =>
+                //     1988 =>
+                //     1992 =>
+                //     1996 =>
+                //
+                //
+                //
+                // );
+                //
+                // echo var_export($juegosOlimpicos);
+
+
+                    echo "<pre>";
+                    for ($i=1960; $i <= 2016; $i++) {
+                        echo  $i . "<br>";
+                        $i =$i+3;
+                    }
+                    echo "</pre>";
+
+
+
+
+             ?>
 
 
         <h3>- Exercici 2</h3>
@@ -158,6 +189,39 @@
 
         <p>funció(2 xocolates) + funció(1 de xiclets) + funció(1 de carmels) = 2+0.5+1.5
 Sent per tant el total, 4.</p>
+
+            <?php
+                //Xoxolate
+                function xocolate( $cantidad_xoco ) {
+                    $precio_xoco = 1;
+                    $total_xoco = $cantidad_xoco * $precio_xoco;
+                    return $total_xoco;
+                }
+                //echo xocolate(2);
+
+                // xiclets
+                function xiclets( $cantidad_xiclets ) {
+                    $precio_xiclets = 0.5;
+                    $total_xiclets = $cantidad_xiclets * $precio_xiclets;
+                    return $total_xiclets;
+                }
+                //echo xiclets(1);
+
+                // carmels
+                function carmels( $cantidad_carmels ) {
+                    $precio_carmels = 1.5;
+                    $total_carmels = $cantidad_carmels * $precio_carmels;
+                    return $total_carmels;
+                }
+                //echo carmels(1);
+
+                // total
+                function total( $t_xoco, $t_xiclets, $t_carmels ) {
+                    $precio_total = xocolate($t_xoco) + xiclets($t_xiclets) + carmels($t_carmels) ;
+                    return $precio_total;
+                }
+                echo total(2,1,1);
+              ?>
 
         <h3>- Exercici 2</h3>
         <p>La criba d'Eratóstenes és un algoritme pensat per a trobar nombres primers dins d'un interval donat. Basats en l'informació de l'enllaç adjunt, implementa la criba d'Eratóstenes dins d'una funció, de tal forma que poguem invocar la funció per a un número concret.</p>
