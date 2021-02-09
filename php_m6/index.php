@@ -220,11 +220,15 @@ Sent per tant el total, 4.</p>
                     $precio_total = xocolate($t_xoco) + xiclets($t_xiclets) + carmels($t_carmels) ;
                     return $precio_total;
                 }
-                echo total(2,1,1);
+                echo "<pre>" . total(2,1,1) . "</pre>";
               ?>
 
         <h3>- Exercici 2</h3>
         <p>La criba d'Eratóstenes és un algoritme pensat per a trobar nombres primers dins d'un interval donat. Basats en l'informació de l'enllaç adjunt, implementa la criba d'Eratóstenes dins d'una funció, de tal forma que poguem invocar la funció per a un número concret.</p>
+
+
+
+
 
 
     </div>
