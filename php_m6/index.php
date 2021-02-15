@@ -26,7 +26,7 @@
 
             }
             echo "<pre>";
-            resta( 42,34);
+            resta(42,34);
             echo "</pre>";
          ?>
 
@@ -143,24 +143,6 @@
         <p>Ens han demanat un llistat amb tots els anys on es van produir jocs olímpics desde 1960(Roma) inclós fins al 2016(Río de Janeiro,també inclós). Programa un bucle que mostri per pantalla els anys olímpics dins de l'interval esmentat.</p>
 
             <?php
-                // $juegosOlimpicos = array(
-                //     1960 => Roma,
-                //     1964 => Tokio,
-                //     1968 => Ciudad de México,
-                //     1972 => Múnich,
-                //     1976 => Montreal,
-                //     1980 => Moscú,
-                //     1984 =>
-                //     1988 =>
-                //     1992 =>
-                //     1996 =>
-                //
-                //
-                //
-                // );
-                //
-                // echo var_export($juegosOlimpicos);
-
 
                     echo "<pre>";
                     for ($i=1960; $i <= 2016; $i++) {
@@ -168,10 +150,6 @@
                         $i =$i+3;
                     }
                     echo "</pre>";
-
-
-
-
              ?>
 
 
@@ -191,26 +169,34 @@
 Sent per tant el total, 4.</p>
 
             <?php
+                // Inicializamos las variables
+                $xocolates = 1;
+                $xiclets = 0.5;
+                $caramels = 1.5;
+
                 //Xoxolate
                 function xocolate( $cantidad_xoco ) {
-                    $precio_xoco = 1;
-                    $total_xoco = $cantidad_xoco * $precio_xoco;
+                    //La vvariable pasa a ser global
+                    global $xocolates;
+                    $total_xoco = $cantidad_xoco * $xocolates;
                     return $total_xoco;
                 }
                 //echo xocolate(2);
 
                 // xiclets
                 function xiclets( $cantidad_xiclets ) {
-                    $precio_xiclets = 0.5;
-                    $total_xiclets = $cantidad_xiclets * $precio_xiclets;
+                    //La vvariable pasa a ser global
+                    global $xiclets;
+                    $total_xiclets = $cantidad_xiclets * $xiclets;
                     return $total_xiclets;
                 }
                 //echo xiclets(1);
 
                 // carmels
                 function carmels( $cantidad_carmels ) {
-                    $precio_carmels = 1.5;
-                    $total_carmels = $cantidad_carmels * $precio_carmels;
+                    //La vvariable pasa a ser global
+                    global $caramels;
+                    $total_carmels = $cantidad_carmels * $caramels;
                     return $total_carmels;
                 }
                 //echo carmels(1);
@@ -220,17 +206,53 @@ Sent per tant el total, 4.</p>
                     $precio_total = xocolate($t_xoco) + xiclets($t_xiclets) + carmels($t_carmels) ;
                     return $precio_total;
                 }
-                echo "<pre>" . total(2,1,1) . "</pre>";
+                echo "<pre>" . total( 2,1,1 ) . "</pre>";
               ?>
 
         <h3>- Exercici 2</h3>
         <p>La criba d'Eratóstenes és un algoritme pensat per a trobar nombres primers dins d'un interval donat. Basats en l'informació de l'enllaç adjunt, implementa la criba d'Eratóstenes dins d'una funció, de tal forma que poguem invocar la funció per a un número concret.</p>
 
 
+            <?php
+            //Criba de Eratóstenes
 
+            //Total de números a evaluar
+            $total = 30;
 
+            for( $i=2; $i<$total; $i++ ) {
+              $numeros[$i]=true;
+            }
+            //Hacer el número 2 el primer número primo
+            $numeros[2]=true;
 
+            //Recorrer los números y para cada uno
+            for ($n=2;$n<$total;$n++)
+            {
+              //Si es primo recorrer los múltiplos y marcarlos como no primo
+              if ($numeros[$n])
+              {
 
+                for ($i=$n*$n;$i<$total;$i+=$n)
+                {
+
+                   $numeros[$i] = false;
+
+                }
+              }
+            }
+
+            //Muestro la lista de los primos
+            echo "Número primos: ";
+            for ($n = 2; $n < $total; $n++)
+            {
+              if ($numeros[$n])
+              {
+                echo $n." ";
+              }
+            }
+        ?>
+
+            <p>Fin </p>
     </div>
 </body>
 </html>
