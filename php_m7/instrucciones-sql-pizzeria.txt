@@ -1,0 +1,72 @@
+************* 
+BOTIGA 
+*************
+- Asignación de nombres significativos a las columnas de la tabla BOTIGA
+SELECT nomBot as Tienda, adercaBot as Direccion, localidad_id_localidad as Localidad FROM botiga
+
+
+- Asignación de nombres significativos a las columnas de la tabla BOTIGA excluyendo algunas filas con WHERE
+SELECT * FROM (SELECT nomBot as tienda, adercaBot as direccion, localidad_id_localidad as localidad FROM botiga) x where localidad = 1
+
+
+- Ordenar los pedidos en orden descendente 
+SELECT * FROM pedidos ORDER BY dataCom DESC
+
+
+- Ordenar los pedidos en orden ascendente 
+SELECT * FROM pedidos ORDER BY dataCom ASC
+
+
+- Seleccionar los pedidos que hay por dia ordenados de forma descendente
+SELECT count(id_Comandas), dataCom from pedidos group by dataCom order by count(id_Comandas) desc
+
+
+
+
+
+*********************
+PEDIDOS - EMPLEADO
+*********************
+- Seleccionar todos los PEDIDOS con valores nulos en los empleados que equivalen a NO REPARTIDORES, por tanto son COCINEROS
+select * from pedidos where id_Empleat is null
+
+
+- Listado de todos los pedidos a recoger
+SELECT * FROM pizzeria.pedidos
+where tipo_entrega = 'recoger'
+
+- Listado de todos los pedidos a domicilio para una fecha concreta
+SELECT * FROM pizzeria.pedidos
+where tipo_entrega = 'domicilio'
+and dataCom = '2020-01-01'
+
+- Listado de nombre y aplellido de empleados de una tienda determinada
+SELECT nomEmp, cognoms FROM empleat where id_botiga =3;
+
+
+**************
+CATEGORIAS
+**************
+- Se muestra el listado de productos junto al listado de categorias
+SELECT * FROM productos
+inner join categoria
+on categoria.id_categoria_pizzas = productos.id_cateogia
+
+- Muestra la cantidad de productos que existen en cada una de las categorias. (1 pizza de la huerta, 2 pizza carnivoras y 2 pizzas de queso. Los 4 restantes son productos que no tienen categoria)
+SELECT count(id_Productos), id_cateogia from productos group by id_cateogia order by count(id_Productos)
+
+
+- Listado la cantidad total de productos por categoria, con asignación de nombre 
+SELECT COUNT(productos.id_Productos) as Cantidad, categoria.nombreCat 
+FROM productos
+inner join categoria
+on categoria.id_categoria_pizzas = productos.id_cateogia
+group by nombreCat 
+
+*************
+PRODUCTOS
+*************
+- Muestra todos los productos que tienen el término "Pizza"
+SELECT * FROM productos 
+where nombrePro
+like '%Pizza%'
